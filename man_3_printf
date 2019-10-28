@@ -1,0 +1,17 @@
+.TH PRINTF 1 "30 October 2019" "0.32" "User's Manual"
+.SH NAME
+.B printf
+- format and print data
+.SH SYNOPSIS
+printf FORMAT [ARGUMENT]...
+.SH DESCRIPTION
+Print ARGUMENT(s) according to FORMAT. Flag characters
+.SH OPTIONS
+.B printf
+does not take any options.
+.SH SEE ALSO
+.I holberton.h(2)
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Written by Daniel Alejandro Cumaco Robayo and Juan Carlos Rengifo.
