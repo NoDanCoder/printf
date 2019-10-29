@@ -27,6 +27,10 @@ void concat_flag(char type, char *dest, va_list list)
 		_itoa(va_arg(list, int), s, 10);
 		_strncat(dest, s, _strlen(s));
 		break;
+	case 'b':
+		_itoa(va_arg(list, int), s, 2);
+		_strncat(dest, s, _strlen(s));
+		break;
 	case '%':
 		s = _strdup("%");
 		_strncat(dest, s, 1);
