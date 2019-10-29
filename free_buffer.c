@@ -12,5 +12,4 @@ void free_buffer(char *buffer, int len)
 
 	for (i = 0; i < len; i++)
 		buffer[i] = 0;
-	free(buffer);
 }
