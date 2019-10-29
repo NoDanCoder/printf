@@ -1,17 +1,27 @@
 .TH PRINTF 1 "30 October 2019" "0.32" "User's Manual"
 .SH NAME
 .B printf
-- format and print data
+- format and print data.
 .SH SYNOPSIS
 printf FORMAT [ARGUMENT]...
 .SH DESCRIPTION
-Print ARGUMENT(s) according to FORMAT. Flag characters
+Print ARGUMENT(s) according to FORMAT.
 .SH OPTIONS
-.B printf
-does not take any options.
+.B Flag characters:
+- The symbol %[flags] denotes the beginning of the format mark.
+.br
+%c   Character
+.br
+%d   Signed decimal integer
+.br
+%i   Signed decimal integer
+.br
+%s   String of characters
+.br
+%%   Print the % symbol
 .SH SEE ALSO
-.I holberton.h(2)
-.SH BUGS
-No known bugs.
+.I holberton.h
+.br
+Full documentation at: <https://github.com/Wetgou/printf>
 .SH AUTHOR
 Written by Daniel Alejandro Cumaco Robayo and Juan Carlos Rengifo.
