@@ -34,7 +34,7 @@ int _printf(const char *format, ...)
 		}
 		else if (format[i] != flag)
 		{
-			_strncat(output,(char *) &format[i], 1);
+			_strncat(output, (char *) &format[i], 1);
 		}
 		i++;
 	}
