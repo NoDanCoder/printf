@@ -6,7 +6,7 @@
  * @sp: buffer where will be allocated the result
  * @radix: baseof number
  *
- * return: nothing
+ * Return: int len
  * on error: -1 ilegal input
  */
 
@@ -15,7 +15,7 @@ int _itoa(int value, char *sp, int radix)
 	char tmp[16];
 	char *tp = tmp;
 	int i;
-	unsigned v;
+	unsigned int v;
 	int len;
 
 	int sign = (radix == 10 && value < 0);
@@ -23,14 +23,14 @@ int _itoa(int value, char *sp, int radix)
 	if (sign)
 		v = -value;
 	else
-		v = (unsigned)value;
+		v = (unsigned int)value;
 
 	while (v || tp == tmp)
 	{
 		i = v % radix;
 		v /= radix;
 		if (i < 10)
-			*tp++ = i+'0';
+			*tp++ = i + '0';
 		else
 			*tp++ = i + 'a' - 10;
 	}
@@ -47,5 +47,6 @@ int _itoa(int value, char *sp, int radix)
 		*sp++ = *--tp;
 
 	*sp = '\0';
-	return len;
+
+	return (len);
 }
