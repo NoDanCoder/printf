@@ -14,5 +14,6 @@ void free_buffer(char *buffer, int len);
 void *_intdup(int str);
 void concat_flag(char type, char *dest, va_list list);
 int _printf(const char *format, ...);
+int _itoa(int value, char *sp, int radix);
 
 #endif /* HOLBERTON_H */

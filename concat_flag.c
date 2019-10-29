@@ -22,6 +22,11 @@ void concat_flag(char type, char *dest, va_list list)
 		s = (!s) ? "(null)" : s;
 		_strncat(dest, s, _strlen(s));
 		break;
+	case 'i':
+	case 'd':
+		_itoa(va_arg(list, int), s, 10);
+		_strncat(dest, s, _strlen(s));
+		break;
 	case '%':
 		s = _strdup("%");
 		_strncat(dest, s, 1);
