@@ -1,4 +1,4 @@
-.TH PRINTF 1 "30 October 2019" "0.32" "User's Manual"
+.TH PRINTF 3 "30 October 2019" "0.32" "User's Manual"
 .SH NAME
 .B printf
 - format and print data.
