@@ -1,6 +1,6 @@
 .TH PRINTF 3 "30 October 2019" "0.32" "User's Manual"
 .SH NAME
-.B printf
+.B _printf
 - format and print data.
 .SH SYNOPSIS
 printf FORMAT [ARGUMENT]...
