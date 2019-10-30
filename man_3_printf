@@ -4,8 +4,46 @@
 - format and print data.
 .SH SYNOPSIS
 printf FORMAT [ARGUMENT]...
+.br
+
+.B #include <stdarg.h>
+.br
+.B #include <stdlib.h>
+.br
+.B #include <unistd.h>
+
+.B #include """holberton.h""
+.br
+
+char *_strncat(char *dest, char *src, int n);
+.br
+unsigned int _strlen(char *s);
+.br
+char *_strcpy(char *dest, char *src);
+.br
+char *_strdup(char *str);
+.br
+char *create_buffer(void);
+.br
+void free_buffer(char *buffer, int len);
+.br
+void *_intdup(int str);
+.br
+void concat_flag(char type, char *dest, va_list list);
+.br
+int _printf(const char *format, ...);
+.br
+int _itoa(int value, char *sp, int radix);
+
 .SH DESCRIPTION
 Print ARGUMENT(s) according to FORMAT.
+.br
+.PP 
+The format string is a character string, each conversion specification is entered by character [%], and ends with a conversion specifier. You can also explicitly specify which argument is taken, in each place where an argument is required, by writing example:
+ 
+_printf ("Unknown: [%d] \n", var);
+.br
+
 .SH OPTIONS
 .B Flag characters:
 - The symbol %[flags] denotes the beginning of the format mark.
@@ -19,6 +57,22 @@ Print ARGUMENT(s) according to FORMAT.
 %s   String of characters
 .br
 %%   Print the % symbol
+.br
+%o   A number in octal (base 8)
+.br
+%u   An unsigned decimal number (base 10)
+.br
+%x   A Number in hexadecimal (base 16)
+.br
+
+.SH RETURN VALUE
+.PP
+Upon successful return, these functions return the number of characters printed (excluding the null byte  used  to  end  output  to
+strings).
+.br
+
+If an exit error is found, it will be returned by the screen with (-1)
+
 .SH SEE ALSO
 .I holberton.h
 .br
